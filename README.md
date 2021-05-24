@@ -10,3 +10,4 @@ A gestão das dependências ficará a cargo da integração com a ferramenta Py-
 O site será realizado com python e o framework Django.
 
 [![codecov](https://codecov.io/gh/Rafael-Fonseca/curso-django/branch/main/graph/badge.svg?token=LKTSP2O0IM)](https://codecov.io/gh/Rafael-Fonseca/curso-django)
+[![Updates](https://pyup.io/repos/github/Rafael-Fonseca/curso-django/shield.svg)](https://pyup.io/repos/github/Rafael-Fonseca/curso-django/)
