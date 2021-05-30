@@ -10,5 +10,5 @@ install:
 script:
   - flake8
   - pytest curso_django --cov=curso_django
-after_success:
-  - codecov
+# after_success:
+#  - codecov
