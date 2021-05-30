@@ -8,6 +8,7 @@ O coverage será realizado através da integração com a ferramenta code-cov.
 A gestão das dependências ficará a cargo da integração com a ferramenta Py-Up.
 
 O site será realizado com python e o framework Django.
+E está disponível em [Site](https://pyprodjangoraf.herokuapp.com)
 
 [![Build Status](https://travis-ci.com/Rafael-Fonseca/curso-django.svg?branch=main)](https://travis-ci.com/Rafael-Fonseca/curso-django)
 [![codecov](https://codecov.io/gh/Rafael-Fonseca/curso-django/branch/main/graph/badge.svg?token=LKTSP2O0IM)](https://codecov.io/gh/Rafael-Fonseca/curso-django)
