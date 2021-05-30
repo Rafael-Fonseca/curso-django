@@ -5,10 +5,10 @@ sudo: true
 python:
   - 3.8
 install:
-  - pip install -q pipenv codecov
+  - pip install -q pipenv
   - pipenv sync --dev
 script:
-  - flake8
-  - pytest curso_django --cov=curso_django
+  - pipenv run flake8
+  - pipenv run pytest --cov=curso_django
 # after_success:
 #  - codecov
