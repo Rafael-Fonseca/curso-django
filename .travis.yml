@@ -7,8 +7,9 @@ python:
 install:
   - pip install -q pipenv
   - pipenv sync --dev
+  - cp contrib/env-sample .env
 script:
   - pipenv run flake8
   - pipenv run pytest --cov=curso_django
 # after_success:
-#  - codecov
+#  - pipenv run codecov
