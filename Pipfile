@@ -6,11 +6,12 @@ name = "pypi"
 [packages]
 django = "*"
 gunicorn = "*"
-python-decouple = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
 django-s3-folder-storage = "*"
 collectfast = "*"
+django-debug-toolbar = "*"
+python-decouple = "*"
 
 [dev-packages]
 flake8 = "*"
