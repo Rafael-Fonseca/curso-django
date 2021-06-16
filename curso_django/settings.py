@@ -13,7 +13,7 @@ import os
 from functools import partial
 
 import dj_database_url
-from decouple import config
+from decouple import config, Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,13 +26,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool)
+DEBUG = True  # config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = ['*']
 
 # Application definition
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 AUTH_USER_MODEL = 'base.User'
 
 INSTALLED_APPS = [
@@ -76,6 +74,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'curso_django.wsgi.application'
 
+# Configuração do Django Degub Toolbar
+INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -145,6 +148,7 @@ if AWS_ACCESS_KEY_ID:
     AWS_S3_CUSTOM_DOMAIN = None
 
     COLLECTFAST_ENABLED = True
+    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 
     AWS_DEFAULT_ACL = 'private'
 
