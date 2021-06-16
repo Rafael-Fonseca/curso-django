@@ -12,6 +12,7 @@ django-s3-folder-storage = "*"
 collectfast = "*"
 django-debug-toolbar = "*"
 python-decouple = "*"
+sentry-sdk = "*"
 
 [dev-packages]
 flake8 = "*"
