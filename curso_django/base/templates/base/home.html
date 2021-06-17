@@ -1,15 +1,16 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Curso</title>
+	<link rel="icon" type="image/png" href="{% static 'img/favicon.png'%}">
 
     <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
+    <meta name="author" content="Rafael Fonseca">
 
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -20,58 +21,123 @@
   </head>
   <body>
 
-    <div class="container-fluid">
+    <div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Profile</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Messages</a>
-				</li>
-				<li class="nav-item dropdown ml-md-auto">
-					 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Dropdown link</a>
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-						 <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
-						<div class="dropdown-divider">
-						</div> <a class="dropdown-item" href="#">Separated link</a>
-					</div>
+					<a class="nav-link active" href="{% url 'base:home' %}">Curso</a>
 				</li>
 			</ul>
 			<div class="jumbotron">
 				<h2>
-					Hello, world!
+					Site desenvolvido no curso <a href="https://pythonpro.com.br/">Python Pro</a> de Renzo Nuccitelli,
+					para aprender Django.
 				</h2>
 				<p>
-					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec augue in dolor hendrerit
+					ultrices. Phasellus id viverra sem. Sed vitae rutrum enim, at consectetur purus. Ut pretium, nisi ac
+					semper tristique, odio orci vulputate augue, non consequat nibh turpis ac ante. Maecenas imperdiet
+					tincidunt sapien, sed elementum orci aliquam non. Duis efficitur lacinia purus. Lorem ipsum dolor
+					sit amet, consectetur adipiscing elit. Sed vel massa tristique, mollis sapien et, laoreet nunc.
+					Ut vitae magna a quam pellentesque fermentum. Aliquam pellentesque libero a libero venenatis,
+					a venenatis ex tempor.
 				</p>
-				<p>
-					<a class="btn btn-primary btn-large" href="#">Learn more</a>
-				</p>
+
 			</div>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card">
 						<h5 class="card-header">
-							Card title
+							Ferramentas utilizadas:
 						</h5>
 						<div class="card-body">
 							<p class="card-text">
-								Card content
+
+								<br><br>
+								<a href="https://www.djangoproject.com/" target="_blank">
+									<img src="{% static 'img/django-logo.png' %}" alt="Django" class="img-thumbnail mr-3 ml-3">
+								</a>Framework gratuito e de código aberto que facilita a maior parte do desenvolvimento
+								web.<br><br>
+
+								<a href="https://getbootstrap.com/" target="_blank">
+									<img src="{% static 'img/bootstrap-logo.png' %}" alt="Bootstrap" class="img-thumbnail mr-3 ml-3">
+								</a>É um popular kit de ferramentas de front-end de código aberto.<br><br>
+
+								<a href="https://www.postgresql.org/" target="_blank">
+									<img src="{% static 'img/postgress-logo.png' %}" alt="Postgress" class="img-thumbnail mr-3 ml-3">
+								</a>É um banco de dados relacional de código aberto.<br><br>
+
+								<a href="https://sqlite.org/index.html" target="_blank">
+									<img src="{% static 'img/sqlite-logo.png' %}" alt="Sqlite" class="img-thumbnail mr-3 ml-3">
+								</a>É uma biblioteca em linguagem C que implementa um banco de dados SQL.<br><br>
+
+								<a href="https://github.com/" target="_blank">
+									<img src="{% static 'img/GitHub-logo.png' %}" alt="GitHub" class="img-thumbnail mr-3 ml-3">
+								</a>Plataforma de desenvolvimento que ajuda a manter o versionamento do código.<br><br>
+
+								<a href="https://travis-ci.com/" target="_blank">
+									<img src="{% static 'img/travis-logo.png' %}" alt="Travis" class="img-thumbnail mr-3 ml-3">
+								</a>Implementa a integração contínua.<br><br>
+
+								<a href="https://pyup.io/" target="_blank">
+									<img src="{% static 'img/py-up-logo.png' %}" alt="Py-Up" class="img-thumbnail mr-3 ml-3">
+								</a>Ferramenta utilizada para gerir as dependências utilizadas.<br><br>
+
+								<a href="https://docs.pytest.org/en/6.2.x/" target="_blank">
+									<img src="{% static 'img/pytest-logo.png' %}" alt="Pytest" class="img-thumbnail mr-3 ml-3">
+								</a>É uma ferramenta de teste da língua Python.<br><br>
+
+								<a href="https://about.codecov.io/" target="_blank">
+									<img src="{% static 'img/codecov-logo.png' %}" alt="Codecov" class="img-thumbnail mr-3 ml-3">
+								</a>Ferramenta que auxilia a manter a cobertura do código.<br><br>
+
+								<a href="https://www.heroku.com/" target="_blank">
+									<img src="{% static 'img/heroku-logo.png' %}" alt="Heroku" class="img-thumbnail mr-3 ml-3">
+								</a>É uma plataforma como serviço (PaaS) que permite disponibilizar o site na internet.
+								<br><br>
+
+								<a href="https://aws.amazon.com/pt/" target="_blank">
+									<img src="{% static 'img/amazon-s3-logo.png' %}" alt="Amazon S3" class="img-thumbnail mr-3 ml-3">
+								</a>O Amazon S3 é um serviço de armazenamento para a Internet.<br><br>
+
+								<a href="https://sentry.io/" target="_blank">
+									<img src="{% static 'img/sentry-logo.png' %}" alt="Sentry" class="img-thumbnail mr-3 ml-3">
+								</a>Software que monitora erros e desempenho, no ambiente de produção.
+								<br><br>
+
 							</p>
-						</div>
-						<div class="card-footer">
-							Card footer
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+	</div>
+
+  	<footer class="main-footer mt-5 pt-4 text-white">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h3>Entre em contato</h3>
+					<adress>
+						+55 61 99554-2832
+						<br>
+						<a href="mailto:rafael.abreu.fonseca@gmail.com" class="text-white">rafael.abreu.fonseca@gmail.com</a>
+					</adress>
+				</div>
+			</div>
+		</div>
+
+		<div class="rights pb-4">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						{%now 'Y'%} - Todos os direitos reservados
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
   </body>
 </html>
