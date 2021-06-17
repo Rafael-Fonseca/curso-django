@@ -131,3 +131,4 @@ dmypy.json
 
 # Static
 staticfiles/
+/curso_django/base/static/
